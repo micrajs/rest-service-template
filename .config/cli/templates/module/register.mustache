@@ -1,0 +1,15 @@
+declare namespace Micra {
+  interface Services {
+    // TODO: register services types
+  }
+
+  export interface Config {
+    '{{{ NAME.KEBAB }}}': import('app/{{{ NAME.KEBAB }}}/types').{{{ NAME.CAPITALIZED }}}Config;
+  }
+}
+
+declare namespace NodeJS {
+  interface ProcessEnv {
+    // TODO: register services env variables
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["ESNext"],
+    "declaration": true,
+    "removeComments": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "jsx": "react",
+    "outDir": ".micra",
+    "baseUrl": "./src"
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", ".config/test/testing.register.d.ts"],
+  "exclude": ["node_modules"]
+}
