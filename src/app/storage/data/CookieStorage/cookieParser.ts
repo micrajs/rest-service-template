@@ -15,7 +15,7 @@ export const cookieParser = (definition: string): Cookie[] => {
     const attribute = attributeHandlers.find((handler) => handler.check(key));
     if (attribute) {
       if (cookies.length > 0) {
-        const cookie = cookies.pop();
+        const cookie = cookies.pop() as Cookie;
         cookies.push(attribute.setValue(cookie, value));
       }
 

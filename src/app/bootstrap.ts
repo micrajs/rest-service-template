@@ -16,7 +16,7 @@ global.use = <T = any>(namespace: string): T => {
     return testScope.get('use')(namespace);
   }
 
-  return app.container?.use(namespace) as T;
+  return app.container.use(namespace);
 };
 
 export { app };

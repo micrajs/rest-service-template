@@ -94,7 +94,10 @@ export class CookieStorageWrapper implements CookieStorage {
 
   remove(key: string): Cookie | null {
     if (this.has(key)) {
-      this.set(key, 'EXCLUDED', { ...this.get(key), expires: new Date('01/01/1970') });
+      this.set(key, 'EXCLUDED', {
+        ...this.get(key),
+        expires: new Date('01/01/1970'),
+      });
       delete this.jar[key];
       this.jarIndex = this.jarIndex.filter((cookie) => cookie !== key);
     }

@@ -6,10 +6,8 @@ export class StorageServiceProvider extends ServiceProvider {
   register() {
     this.container.factory(
       'storage/cookie',
-      () => new CookieStorageWrapper(
-        getCookieClient(),
-        config('storage').cookies,
-      ),
+      () =>
+        new CookieStorageWrapper(getCookieClient(), config('storage').cookies),
     );
   }
 }

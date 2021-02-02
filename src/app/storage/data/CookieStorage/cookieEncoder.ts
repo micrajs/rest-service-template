@@ -38,8 +38,12 @@ export const cookieEncoder = (cookie: Cookie): string => {
     encoded.push('HttpOnly');
   }
 
-  if (!isNaN(cookie.maxAge) && isFinite(cookie.maxAge) && cookie.maxAge > -1) {
-    encoded.push(`Max-Age=${Math.floor(cookie.maxAge)}`);
+  if (
+    !isNaN(Number(cookie.maxAge)) &&
+    isFinite(Number(cookie.maxAge)) &&
+    Number(cookie.maxAge) > -1
+  ) {
+    encoded.push(`Max-Age=${Math.floor(Number(cookie.maxAge))}`);
   }
 
   if (cookie.expires && typeof cookie.expires.toUTCString === 'function') {
